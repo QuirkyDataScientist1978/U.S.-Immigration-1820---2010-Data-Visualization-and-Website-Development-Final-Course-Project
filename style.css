@@ -1,0 +1,710 @@
+/* CSS Document */
+body, html{
+	height: 100%;
+	margin: 0;
+	font-size: 16px;
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	line-height: 1.8em;
+	color: #666;
+}
+
+.paradiv1, .paradiv2, .paradiv3, .paradiv4, .paradiv5, .paradiv6, .paradiv7 {
+	position: relative;
+	opacity:0.70;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	/* note--the below commented out code can remove the below effect -- so it only scrolls
+		fixed = parallax
+		scroll = normal
+	*/
+	
+	background-attachment: fixed;
+}
+
+.paradiv1{
+	background-image: url('images/paradiv1.jpeg');
+	min-height: 100%;
+}
+
+.paradiv2{
+	background-image: url('images/paradiv2.jpeg');
+	min-height: 800px;
+}
+
+.paradiv3{
+	background-image: url('images/paradiv3.jpeg');
+	min-height: 800px;
+}
+
+.paradiv4{
+	background-image: url('images/paradiv4.jpeg');
+	min-height: 800px;
+}
+
+.paradiv5{
+	background-image: url('images/paradiv5.jpeg');
+	min-height: 800px;
+}
+
+.paradiv6{
+	background-image: url('images/paradiv6.jpeg');
+	min-height: 800px;
+}
+
+.paradiv7{
+	background-image: url('images/paradiv7.jpeg');
+	min-height: 800px;
+}
+
+.section1 {
+	text-align: center;
+	padding: 50px 80px;
+	width: auto;
+	min-height: 500px;
+	border: 5px;
+}
+
+.section{
+	text-align: center;
+	padding: 50px 80px;   /* first is top/bottom and second is left/right */
+}
+
+.section-light{
+	background-color: #f4f4f4;
+	color: #666;
+}
+
+
+.section-dark{
+	background-color: #282e34;
+	color: #ddd;
+}
+
+.ptext{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	font-size: 27px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+}
+
+.ptext .border{
+	background-color: #111;
+	color: #fff;
+	padding: 20px;	
+}
+
+.ptext .border.trans{
+	background-color: transparent;
+}
+
+@media(max-width:568px){
+	.paradiv1, .paradiv2, .paradiv3, .paradiv4, .paradiv5, .paradiv6, .paradiv7 {
+		background-attachment: scroll;
+	}
+}
+
+/* CSS for styling the disappearing nav bar upon scroll */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: #555;
+	text-align: center;
+	padding: 20px 0;
+	transition: all 0.5s ease;
+}
+
+nav.hidden {
+	transform: translate3d(0, -100%, 0); /* this functions to hid the nav bar on scroll */
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 60px;
+}
+
+nav ul li: last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: Arial, sans-serif;
+}
+/* End CSS for scroll bar  */
+
+/*.content {
+	height: 2000px;
+	background-color: rgb(200, 200, 250);
+}      this functions to change the background color content of the website - disabled for now since I am using a parallax*/
+
+* {
+  outline: none;
+}
+
+.timeline-carousel {
+  padding: 86px 6.9444% 90px 6.9444%;
+  position: relative;
+  overflow: hidden;
+}
+.timeline-carousel:after, .timeline-carousel:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 100%;
+  width: 6.9444%;
+  background-color: #1d1d1e;
+  z-index: 3;
+  width: 6.9444%;
+}
+.timeline-carousel:after {
+  left: 0;
+}
+.timeline-carousel:before {
+  right: 0;
+  opacity: 0;
+}
+.timeline-carousel .slick-list {
+  overflow: visible;
+}
+.timeline-carousel .slick-dots {
+  bottom: -73px;
+}
+.timeline-carousel h1 {
+  color: white;
+  font-size: 46px;
+  line-height: 50px;
+  margin-bottom: 40px;
+  font-weight: 900;
+}
+.timeline-carousel__image {
+  padding-right: 30px;
+}
+.timeline-carousel__item {
+  cursor: pointer;
+}
+.timeline-carousel__item .media-wrapper {
+  opacity: 0.4;
+  padding-bottom: 71.4%;
+  -webkit-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -o-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.timeline-carousel__item:last-child .timeline-carousel__item-inner:after {
+  width: calc(100% - 30px);
+}
+.timeline-carousel__item-inner {
+  position: relative;
+  padding-top: 45px;
+}
+.timeline-carousel__item-inner:after {
+  position: absolute;
+  width: 100%;
+  top: 45px;
+  left: 0;
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.timeline-carousel__item-inner .year {
+  font-size: 36px;
+  line-height: 36px;
+  color: white;
+  display: table;
+  letter-spacing: -1px;
+  padding-right: 10px;
+  background-color: #1d1d1e;
+  z-index: 1;
+  position: relative;
+  margin: -15px 0 20px;
+  font-weight: 900;
+}
+.timeline-carousel__item-inner .year:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: -10px;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color: #1d1d1e;
+  z-index: 3;
+}
+.timeline-carousel__item-inner .month {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #b38c52;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+.timeline-carousel__item-inner p {
+  font-size: 12px;
+  line-height: 18px;
+  color: white;
+  width: 60%;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.timeline-carousel__item-inner .read-more {
+  font-size: 12px;
+  color: #b38c52;
+  display: table;
+  margin-bottom: 10px;
+  font-weight: 900;
+  text-decoration: none;
+  position: relative;
+}
+.timeline-carousel__item-inner .read-more:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  border-bottom: 2px solid #b38c52;
+  -webkit-transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -o-transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.timeline-carousel__item-inner .read-more:hover:after {
+  width: 100%;
+}
+.timeline-carousel__item-inner .pointer {
+  height: 29px;
+  position: relative;
+  z-index: 1;
+  margin: -4px 0 16px;
+}
+.timeline-carousel__item-inner .pointer:after, .timeline-carousel__item-inner .pointer:before {
+  position: absolute;
+  content: "";
+}
+.timeline-carousel__item-inner .pointer:after {
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  background-color: #b38c52;
+}
+.timeline-carousel__item-inner .pointer:before {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 4px;
+  background-color: #b38c52;
+}
+.timeline-carousel .slick-active .media-wrapper {
+  opacity: 1 !important;
+}
+
+.slick-dots {
+  bottom: 60px;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 2;
+}
+.slick-dots li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 6px;
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+.slick-dots li:last-child {
+  margin-right: 0;
+}
+.slick-dots li.slick-active button {
+  background: #b38c52;
+  border-color: #b38c52;
+}
+.slick-dots li button {
+  display: block;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  -webkit-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -o-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.slick-dots li button:hover {
+  background: #b38c52;
+  border-color: #b38c52;
+}
+
+.link {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  z-index: 9999;
+}
+.link a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+.link .fa {
+  font-size: 28px;
+  margin-right: 8px;
+  color: #fff;
+}.page1 {
+}
+.main-timeline{ font-family: 'Roboto', sans-serif; }
+.main-timeline .timeline{
+    width: 57.3%;
+    padding: 0 0 0 80px;
+    margin-bottom: 20px;
+    border: 10px solid #E52449;
+    border-radius: 90px;
+    float: right;
+    position: relative;
+}
+.main-timeline .timeline:before{
+    content: '';
+    height: 115%;
+    width: 10px;
+    background-color: #fff;
+    transform:translateY(-50%);
+    position: absolute;
+    left: 70px;
+    top: 50%;
+}
+.main-timeline .timeline-content{
+    background-color: #E52449;
+    text-align: left;
+    border-radius: 0 90px 90px 0;
+    display: block;
+    position: relative;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .content{
+    background-color: #fff;
+    padding: 17px 40px 17px 80px;
+    border-radius: 90px;
+}
+.main-timeline .timeline-year{
+    color: #fff;
+    background-color: #E52449;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 110px;
+    height: 130px;
+    width: 130px;
+    border: 10px solid #D8DCE0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5) inset;
+    border-radius: 50%;
+    transform:translateY(-50%);
+    position: absolute;
+    left: -70px;
+    top: 50%;
+}
+.main-timeline .title{
+    color: #E52449;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 0 0 7px 0;
+}
+.main-timeline .description{
+    color: #000;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin: 0 0 5px 0;
+}
+.main-timeline .timeline:nth-child(even){
+    float: left;
+    padding: 0 80px 0 0;
+}
+.main-timeline .timeline:nth-child(even):before{
+    left:auto;
+    right: 70px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-year{
+    left:auto;
+    right: -70px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content{
+    border-radius: 90px 0 0 90px;
+    text-align: right;
+}
+.main-timeline .timeline:nth-child(even) .content{ padding: 17px 80px 17px 40px; }
+.timeline:nth-child(6n+2){border-color: #F67900;}
+.timeline:nth-child(6n+2) .timeline-content{background-color: #F67900;}
+.timeline:nth-child(6n+2) .timeline-year{background-color: #F67900;}
+.timeline:nth-child(6n+2) .title{color: #F67900;}
+.timeline:nth-child(6n+3){border-color: #f3ad0a;}
+.timeline:nth-child(6n+3) .timeline-content{background-color: #f3ad0a;}
+.timeline:nth-child(6n+3) .timeline-year{background-color: #f3ad0a;}
+.timeline:nth-child(6n+3) .title{color: #f3ad0a;}
+.timeline:nth-child(6n+4){border-color: #8ab814;}
+.timeline:nth-child(6n+4) .timeline-content{background-color: #8ab814;}
+.timeline:nth-child(6n+4) .timeline-year{background-color: #8ab814;}
+.timeline:nth-child(6n+4) .title{color: #8ab814;}
+.timeline:nth-child(6n+5){border-color: #3C9EEF;}
+.timeline:nth-child(6n+5) .timeline-content{background-color: #3C9EEF;}
+.timeline:nth-child(6n+5) .timeline-year{background-color: #3C9EEF;}
+.timeline:nth-child(6n+5) .title{color: #3C9EEF;}
+.timeline:nth-child(6n+6){border-color: #9241EA;}
+.timeline:nth-child(6n+6) .timeline-content{background-color: #9241EA;}
+.timeline:nth-child(6n+6) .timeline-year{background-color: #9241EA;}
+.timeline:nth-child(6n+6) .title{color: #9241EA;}
+
+
+@media screen and (max-width:1200px){
+    .main-timeline .timeline{ width: 59%; }
+    .main-timeline .timeline-content{ border-radius: 0 92px 92px 0; }
+    .main-timeline .timeline:nth-child(even) .timeline-content{ border-radius: 92px 0 0 92px; }
+    .main-timeline .content{ padding: 25px 40px 25px 80px; }
+    .main-timeline .timeline:nth-child(even) .content{ padding: 25px 80px 25px 40px; }
+}
+@media screen and (max-width:990px){
+    .main-timeline .timeline{ width: 61.7%;}
+}
+@media screen and (max-width:767px){
+    .main-timeline .timeline{ width: 100%; }
+    .main-timeline .timeline:nth-child(even){
+        float: right;
+        padding: 0 0 0 80px;
+    }
+    .main-timeline .timeline:nth-child(even):before{ left:70px; }
+    .main-timeline .timeline:nth-child(even) .timeline-content{
+        border-radius:0 92px 92px 0;
+        text-align: left;
+    }
+    .main-timeline .timeline:nth-child(even) .timeline-year{ left: -70px; }
+    .main-timeline .timeline:nth-child(even) .content{ padding: 25px 40px 25px 80px; }
+}
+@media screen and (max-width:479px){
+    .main-timeline{ padding-top: 30px; }
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        padding: 0;
+        margin-bottom: 60px;
+        border-radius: 10px;
+    }
+    .main-timeline .timeline:before{ display: none;}
+    .main-timeline .timeline-content,
+    .main-timeline .content{
+        border-radius: 0 0 0 0;
+    }
+    .main-timeline .timeline-year,
+    .main-timeline .timeline:nth-child(even) .timeline-year{
+        top: -70px;
+        left: 50%;
+        transform:translateY(0) translateX(-50%) scale(0.7);
+    }
+    .main-timeline .timeline:nth-child(even) .content,
+    .main-timeline .content{
+        text-align: center;
+        padding: 55px 20px 20px;
+    }
+    .main-timeline .title{ font-size: 18px; }
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+/* Next & previous buttons */
+/*.prev, .next {
+  cursor: pointer;
+  position: inherit;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 5.0s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}*/
+
+/* Position the "next button" to the right */
+/*.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+} */
+
+/* On hover, add a black background color with a little bit see-through */
+/*.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+} */
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 2.0s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* this is the start of the div styling for parallax effects */
+/*
+* {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-family: Helvectica; 
+	width: 100%;
+	height: 100vh;
+}
+
+h2 {
+	font-size: 60px;
+	background: #eee;
+	padding: 8px 24px;
+	border-radius: 16px;
+}
+
+div: nth-child(1){
+	background-image: url("images/paradiv1.jpeg");
+	background-size: cover;	
+}
+/*div:nth-child(2){
+	background: maroon;
+} */
+/*
+div:nth-child(2){
+	background-image: url("images/paradiv2.jpeg");
+	background-size: 400px;
+}
+
+div:nth-child(3){
+	height: 400px;
+	background-image: url("images/paradiv3.jpeg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/*div:nth-child(5){
+	background: acquamarine;
+}
+/* End of Parallax Settings */
+
+iframe {
+	padding: 20px;
+}
+
+container {
+	margin-top: auto;
+	margin-bottom: auto
+}
+
+p {
+	width: 1000px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
